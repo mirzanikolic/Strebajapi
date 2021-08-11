@@ -11,8 +11,12 @@ exports.create = (req, res) => {
 
   // Create a Customer
   const customer = new Customer({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
-    name: req.body.name,
+    city: req.body.city,
+    phoneNumber: req.body.phoneNumber,
+    studentType: req.body.studentType,
     active: req.body.active
   });
 
