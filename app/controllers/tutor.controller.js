@@ -1,5 +1,6 @@
 const Tutor = require("../models/tutor.model.js");
 
+
 // Create and Save a new Tutor
 exports.create = (req, res) => {
   // Validate request
@@ -41,6 +42,7 @@ exports.findAll = (req, res) => {
       });
     else res.send(data);
   });
+
 };
 
 // Find a single Tutor with a tutorID

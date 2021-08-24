@@ -8,13 +8,13 @@ module.exports = app => {
     app.get("/tutors", tutors.findAll);
   
     // Retrieve a single Tutor with tutorId
-    app.get("/tutors/:tutorId", tutors.findOne);
+    app.get("/tutors/:tutorID", tutors.findOne);
   
     // Update a Tutor with customerId
-    app.put("/tutors/:tutorId", tutors.update);
+    app.put("/tutors/:tutorID", tutors.update);
   
     // Delete a Tutor with customerId
-    app.delete("/tutors/:tutorId", tutors.delete);
+    app.delete("/tutors/:tutorID", tutors.delete);
   
     // Create a new Tutor
     app.delete("/tutors", tutors.deleteAll);

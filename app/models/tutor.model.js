@@ -9,7 +9,11 @@ const Tutor = function(tutor) {
   this.phoneNumber = tutor.phoneNumber;
   this.skills = tutor.skills;
   this.active = tutor.active;
+  
 };
+
+
+
 
 Tutor.create = (newTutor, result) => {
   sql.query("INSERT INTO tutors SET ?", newTutor, (err, res) => {
@@ -25,7 +29,7 @@ Tutor.create = (newTutor, result) => {
 };
 
 Tutor.findById = (tutorID, result) => {
-  sql.query(`SELECT * FROM tutors WHERE id = ${tutorID}`, (err, res) => {
+  sql.query(`SELECT * FROM tutors WHERE tutors.id = ${tutorID}`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
@@ -52,9 +56,11 @@ Tutor.getAll = result => {
     }
 
     console.log("tutors: ", res);
-    result(null, res);
+    result(null,res)
   });
+
 };
+
 
 Tutor.updateById = (id, tutor, result) => {
   sql.query(

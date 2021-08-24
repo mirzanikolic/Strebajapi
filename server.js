@@ -18,6 +18,12 @@ require("./app/routes/customer.routes.js")(app);
 
 require("./app/routes/tutor.routes.js")(app);
 
+require("./app/routes/students.routes.js")(app);
+
+require("./app/routes/instruction.routes.js")(app);
+
+require("./app/routes/skills.routes.js")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || '3000';
 app.listen(PORT, () => {
